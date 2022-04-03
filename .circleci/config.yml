@@ -9,10 +9,10 @@ jobs:
       image: "cimg/base:stabe"
     steps:
       - node/install
-      -checkout
+      - checkout
       - aws-cli/setup
       - eb/setup
-      -run:
+      - run:
         name: Install frontend packages
         command: |
           npm run frontend:install
