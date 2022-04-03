@@ -1,0 +1,45 @@
+version: 2.1
+orbs:
+  node: circleci/node@5.0.0
+  aws-cli: circleci/aws-cli@2.1.0
+  eb: circleci/aws-elastic-beanstalk@1.0.0
+jobs:
+  deploy:
+    docker:
+      image: "cimg/base:stabe"
+    steps:
+      - node/install
+      -checkout
+      - aws-cli/setup
+      - eb/setup
+      -run:
+        name: Install frontend packages
+        command: |
+          npm run frontend:install
+      - run:
+        name: Install backend packages
+        command: |
+          npm run backend:install
+      - run:
+        name: build frontend
+        command: |
+          npm run frontend:build
+      - run:
+        name: build backend
+        command: |
+          npm run backend:build
+      - run:
+          name: deploy frontend
+          command: |
+            npm run frontend:deploy
+      - run:
+        name: deploy backend
+        command: |
+          npm run backend:deploy
+workflows:
+  jpbs:
+    - deploy:
+      filter:
+        branches:
+          only:
+            - master

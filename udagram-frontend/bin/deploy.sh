@@ -1,1 +1,1 @@
-aws s3 cp --recursive --acl public-read ./www s3://ma-udagram/
+aws s3 cp --recursive --acl public-read ./www s3://frontend-2022/
