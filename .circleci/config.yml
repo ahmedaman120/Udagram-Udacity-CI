@@ -40,7 +40,7 @@ workflows:
   orchestration:
     jobs:
       - deploy:
-          filter:
+          filters:
             branches:
               only:
                 - master
