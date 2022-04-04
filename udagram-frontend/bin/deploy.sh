@@ -1,1 +1,1 @@
-aws s3 cp --recursive  ./www s3://frontend-2022/ --acl=public-read
+aws s3 cp --recursive  ./www s3://frontend-2022/ 
