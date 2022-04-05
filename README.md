@@ -23,6 +23,7 @@ This project contains two main folder first one ` udagram-frontend ` this for fr
 ### Prepare the project to get in CI pipline
 on this phase we prpare our project to build localy by using packge.json script
 ```
+
 yarn build # this for build the project
 yarn deploy # this for run bash scripts that will be responsible for deploying our project
 ```
