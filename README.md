@@ -1,6 +1,7 @@
 ## `Udagram` Deploy 🚀 Full Stack App- EG_FWD Program
 
-This project contains two main folder first one ` udagram-frontend ` this for front end 🎨 another one `udagram-api` this for api 🚢 
+This project contains two main folder first one ` udagram-frontend ` this for front end 🎨 another one `udagram-api` this for api 🚢 you can access the website from this link 🔗 
+`http://frontend-2022.s3-website-us-east-1.amazonaws.com`
 
 
 
